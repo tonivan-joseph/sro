@@ -1,0 +1,125 @@
+@media only screen and (min-width: 280px) and (max-width: 640px) {
+    /*Inicio Menu */
+    .container_header { width: 100%; flex; flex-direction: column; height: 125px;}
+    .logo-top img { max-width: 160px; margin-top: 20px; }
+
+    .top_search_header { display: block; width: 200px; margin: 5px auto 20px auto; }
+
+    /*BOTÃO DO MENU*/
+    .btn-menu { position: absolute; top: 28px; left: 10px; cursor: pointer; }
+    .btn-menu > div { width: 30px; height: 5px; background: #465459; margin: 4px 0px; transition: all 0.4s linear; }
+
+    .btn-close {
+        display: block;
+        font-size: 2em;
+        color: #fff;
+        float: right;
+        cursor: pointer;
+        padding: 10px;
+        margin: 5% 5% 0 0;
+    }
+
+    /*menu principal*/
+    .menu {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0,0,0,0.75);
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu ul {
+        width: 100%;
+        display: flex;flex-direction: column;
+        text-align: center;
+    }
+
+    .menu ul li {
+        margin: 10px 2%;
+        font-size: 1.8em;
+    }
+    /*fim menu*/
+
+    /*inicio slider show*/
+    .slogan {
+        height:350px;
+    }
+
+    .slogan_align {
+        display: flex;
+        width:100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        /*background-color:#ccc;*/
+    }
+
+    .slogan_txt_g {
+        margin-bottom: 15px;
+        width:100%;
+        
+        text-align: center;
+        /*background-color:#eee;*/
+    }
+
+    .slogan_txt_g h2 {
+        font-size:1.8em;
+    }
+
+    .slogan_banner img {
+        width:236px;
+        max-width:100%;
+
+    }
+
+    .slogan_txt_p {
+        width:100%;
+        margin-top: 15px;
+        /*background-color:#000;*/
+    }
+
+    .slogan_txt_p h3 {
+        padding: 0 20px;
+    }
+
+    /*Fim slog*/
+    
+    /*Formulario de email*/
+    .align_form {
+        height: 200px;
+    }
+
+    .align_int_form {
+        display: flex;
+        flex-direction: column;
+        width:100%; 
+    }
+
+    .item_txt {
+         order: 1;
+    }
+
+    .item_txt p {
+        margin-top: 15px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .form_right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item_email {
+        height: 35px;
+        max-width: 270px;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+
+}
