@@ -2,7 +2,7 @@
 
 	<header class="item-header header-button">
 		<h1><i class=" icon left fas fa-thumbtack"></i>Todos os Posts</h1><br/>
-		<button><a href="add-posts.php">Novo Posts</a></button>
+		<button><a href="add_posts">Novo Posts</a></button>
 	</header>
 
 	<table class="rTable">
@@ -12,13 +12,13 @@
 			<th class="title-table">Data</th>
 		</tr>
 		
-		<?php foreach($all_posts as $ed): ?>
+		<?php foreach($posts as $ed): ?>
 		<tr>
 			<td>
 				<strong><a href="#"><?php echo $ed['titulo']; ?></a></strong>
 				<div class="row-actions">
-					<span class="edit"><a href="<?php echo BASE_URL; ?>painel/edit_paginas/<?php echo $ed['id']; ?>">Editar</a></span>
-					<span class="delete"><a href="<?php echo BASE_URL; ?>painel/del_paginas/<?php echo $ed['id']; ?>">Excluir</a></span>
+					<span class="edit"><a href="<?php echo BASE_URL; ?>painel/edit_posts/<?php echo $ed['id']; ?>">Editar</a></span>
+					<span class="delete"><a href="<?php echo BASE_URL; ?>painel/del_posts/<?php echo $ed['id']; ?>">Excluir</a></span>
 					<span class="views"><a href="<?php echo BASE.$ed['url']; ?>">Visualizar</a></span>
 				</div>
 			</td>

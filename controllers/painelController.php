@@ -59,16 +59,16 @@ class painelController extends controller {
 		$this->loadTemplateInPainel('painel/paginas', $dados);
 	}
 
-	public function all_posts() {
+	public function posts() {
 		$u = new Usuarios();
 		$u->verificarLogin();
 
 		$dados = array();
 
 		$pt = new Posts();
-		$dados['all_posts'] = $pt->getPosts();
+		$dados['posts'] = $pt->getPosts();
 
-		$this->loadTemplateInPainel('painel/all_posts', $dados);
+		$this->loadTemplateInPainel('painel/posts', $dados);
 	}
 
 	public function menus() {
@@ -139,6 +139,17 @@ class painelController extends controller {
 		$this->loadTemplateInPainel('painel/add_menus', $dados);
 	}
 
+	// Class da exclução das posts
+	public function del_posts($id) {
+		$u = new Usuarios();
+		$u->verificarLogin();
+
+		$p = new Posts();
+		$p->deletPosts($id);
+
+		header("Location: ".BASE_URL."painel/posts");
+	}
+
 	// Class da exclução das paginas
 	public function del_paginas($id) {
 		$u = new Usuarios();
@@ -161,9 +172,9 @@ class painelController extends controller {
 		if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
 			$titulo = addslashes($_POST['titulo']);
 			$url = addslashes($_POST['url']);
-			$corpo_pages = addslashes($_POST['corpo_pages']);
+			$corpo = addslashes($_POST['corpo']);
 			
-			$p->updatePages($id, $titulo, $url, $corpo_pages);
+			$p->updatePages($id, $titulo, $url, $corpo);
 			header("Location: ".BASE_URL."painel/paginas");
 			exit;
 		}
@@ -171,6 +182,29 @@ class painelController extends controller {
 		$dados['paginas'] = $p->getPaginaById($id);
 
 		$this->loadTemplateInPainel('painel/edit_paginas', $dados);
+	}
+
+	//Editar posts
+	public function edit_posts($id) {
+		$u = new Usuarios();
+		$u->verificarLogin();
+
+		$dados = array();
+		$p = new Posts();
+
+		if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
+			$titulo = addslashes($_POST['titulo']);
+			$url = addslashes($_POST['url']);
+			$corpo = addslashes($_POST['corpo']);
+			
+			$p->updatePosts($id, $titulo, $url, $corpo);
+			header("Location: ".BASE_URL."painel/Posts");
+			exit;
+		}
+
+		$dados['posts'] = $p->getPostsById($id);
+
+		$this->loadTemplateInPainel('painel/edit_posts', $dados);
 	}
 
 	public function add_paginas() {
@@ -184,8 +218,8 @@ class painelController extends controller {
 			$titulo = utf8_encode(addslashes($_POST['titulo']));
 			$url = addslashes($_POST['url']);
 			$autor = addslashes($_POST['autor']);
-			$corpo_pages = addslashes($_POST['corpo_pages']);
-			$p->insertPaginas($titulo, $url, $autor, $corpo_pages);
+			$corpo = addslashes($_POST['corpo']);
+			$p->insertPaginas($titulo, $url, $autor, $corpo);
 
 			if(isset($_POST['ad_menu']) && !empty($_POST['ad_menu'])) {
 				$m = new Menu();
@@ -197,6 +231,28 @@ class painelController extends controller {
 		}
 
 		$this->loadTemplateInPainel('painel/add_paginas', $dados);
+	}
+
+	//adicionar posts do sistemas 
+	public function add_posts() {
+		$u = new Usuarios();
+		$u->verificarLogin();
+
+		$dados = array();
+		$p = new Posts();
+
+		if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
+			$titulo = utf8_encode(addslashes($_POST['titulo']));
+			$url = addslashes($_POST['url']);
+			$autor = addslashes($_POST['autor']);
+			$corpo = addslashes($_POST['corpo']);
+			$p->insertPosts($titulo, $url, $autor, $corpo);
+
+			header("Location: ".BASE_URL."painel/all_posts");
+			exit;
+		}
+
+		$this->loadTemplateInPainel('painel/add_posts', $dados);
 	}
 
 	//adcionando os usuarios do sistema
