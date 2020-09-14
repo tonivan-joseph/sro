@@ -48,13 +48,13 @@
 	<div class="slogan">
 		<div class="slogan_align">
 			<div class="slogan_txt_g">
-				<h2><?php echo utf8_encode($this->config['home_welcome_left']); ?></h2>
+				<h2><?php echo $this->config['home_welcome_left']; ?></h2>
 			</div>
 			<div class="slogan_banner">
 				<img src="<?php echo BASE_URL.'assets/images/'.$this->config['home_banner']; ?>">
 			</div>
 			<div class="slogan_txt_p">
-				<h3><?php echo utf8_encode($this->config['home_welcome_right']); ?></h3>
+				<h3><?php echo $this->config['home_welcome_right']; ?></h3>
 			</div>
 		</div>
 	</div>

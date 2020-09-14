@@ -1,7 +1,7 @@
 <?php  
 class Posts extends model {
 
-	public function getPosts($limit = 0) {
+	public function getPosts($limit = 200) {
 		$array = array();
 
 		$sql = "SELECT * FROM posts";
@@ -21,7 +21,7 @@ class Posts extends model {
 	public function getPost($url) {
 		$array  = array();
 
-		$sql = "SELECT titulo, autor, data, corpo_pages FROM posts WHERE url = '$url'";
+		$sql = "SELECT titulo, autor, data, corpo FROM posts WHERE url = '$url'";
 		$sql = $this->db->query($sql);
 
 		if($sql->rowCount() > 0){

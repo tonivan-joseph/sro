@@ -1,19 +1,19 @@
 
 <!--Conteudo Principal do site -->
 		<section class="content">
-			<?php foreach($posts as $post): ?>
+			<?php foreach($posts as $pag): ?>
 				<article>
-					<header><h1><a href="<?php echo BASE.$post['url']; ?>"><?php echo utf8_encode(strtoupper($post['titulo'])); ?></a></h1></header>
-					<div class="avatar_autor">
+					<header><h1><a href="<?php echo BASE.$pag['url']; ?>"><?php echo strtoupper($pag['titulo']); ?></a></h1></header>
+					<!-- <div class="avatar_autor">
 						<div class="img_icon">
-							<img src="<?php echo BASE_URL.'assets/images/'.$post['avatar']; ?>">
+							<img src="<?php echo BASE_URL.'assets/images/'.$pag['']; ?>">
 						</div>
-						<div class="txt_icon">Escrito por: <span><?php echo utf8_encode($post['autor']); ?></span></div>
-					</div>
+						<div class="txt_icon">Escrito por: <span><?php echo $pag['autor']; ?></span></div>
+					</div>  -->
 					<figure>
-					<a href="marketing-digital.html"><img src="<?php echo BASE_URL; ?>assets/images/imagem-marketing-digital.jpg" />
+					<a href="<?php echo BASE.$pag['url']; ?>"><img src="<?php echo BASE_URL; ?>assets/images/imagem-marketing-digital.jpg" />
 					</a></figure>
-					<p><?php echo utf8_encode($post['corpo_pages']); ?><a href="<?php echo BASE.$post['url']; ?>">Continue lendo >></a></p>
+					<p><?php echo substr($pag['corpo'], 0, 250); ?><a href="<?php echo BASE.$pag['url']; ?>">Continue lendo >></a></p>
 				</article>
 			<?php endforeach ?>	
 		</section>
@@ -26,10 +26,10 @@
 					<img src="<?php echo BASE_URL.'assets/images/'.$this->config['home_sidebar_autor_img']; ?>" width="270" height="270"/>
 				</div>
 				<div class="sidebar_name">
-					<h2><?php echo utf8_encode($this->config['home_siderbar_autor_name']);?><span class="icon-user"></span></h2>
+					<h2><?php echo $this->config['home_siderbar_autor_name'];?><span class="icon-user"></span></h2>
 				</div>
 				<div class="sidebar_legend">
-					<p> <?php echo utf8_encode($this->config['home_siderbar_autor_legend']); ?><a href="<?php echo BASE_URL ?>sobre">Saiba mais..</a></p>
+					<p> <?php echo $this->config['home_siderbar_autor_legend']; ?><a href="<?php echo BASE_URL ?>sobre">Saiba mais..</a></p>
 				</div>
 			</div>
 
@@ -38,11 +38,11 @@
 				<div class="box_title">
 					<h2><span class="icon-newspaper"></span>Artigos Populares</h2>
 				</div>
-				<?php foreach($posts as $post_bar): ?>
+				<?php foreach($posts as $pag_bar): ?>
 					<div class="title_aling">
 						<ul>
 							<li><span class="icon-arrow-right icon-arrow"></span></li>
-							<li class="line_bootom"><a href="<?php echo BASE.$post_bar['url']; ?>"><?php echo utf8_encode($post_bar['titulo']); ?></a>
+							<li class="line_bootom"><a href="<?php echo BASE.$pag_bar['url']; ?>"><?php echo $pag_bar['titulo']; ?></a>
 							</li>
 						</ul>
 					</div>

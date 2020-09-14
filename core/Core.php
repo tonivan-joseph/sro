@@ -34,7 +34,7 @@ Class Core {
 			$c = new $currentController();	
 		
 		} else {
-			$c = new paginasController();
+			$c = new postsController();
 		 	$currentAction = "index";
 		 	$pNome = explode("Controller", $currentController);
 		 	$pNome = $pNome[0];
