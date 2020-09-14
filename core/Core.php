@@ -33,15 +33,14 @@ Class Core {
 		if(file_exists('controllers/'.$currentController.'.php')) {
 			$c = new $currentController();	
 		
-		} else {
+		}else {
 			$c = new postsController();
 		 	$currentAction = "index";
 		 	$pNome = explode("Controller", $currentController);
 		 	$pNome = $pNome[0];
 		 	$params = array($pNome);
-		 }	
+		 }
 
-		
 		call_user_func_array(array($c, $currentAction), $params);
 
 	}

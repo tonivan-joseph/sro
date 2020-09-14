@@ -1,7 +1,7 @@
 <?php  
 class Posts extends model {
 
-	public function getPosts($limit = 200) {
+	public function getPosts($limit = 0) {
 		$array = array();
 
 		$sql = "SELECT * FROM posts";

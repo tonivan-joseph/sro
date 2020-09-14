@@ -59,16 +59,16 @@ class painelController extends controller {
 		$this->loadTemplateInPainel('painel/paginas', $dados);
 	}
 
-	public function edit() {
+	public function all_posts() {
 		$u = new Usuarios();
 		$u->verificarLogin();
 
 		$dados = array();
 
 		$pt = new Posts();
-		$dados['edit'] = $pt->getPosts();
+		$dados['all_posts'] = $pt->getPosts();
 
-		$this->loadTemplateInPainel('painel/edit', $dados);
+		$this->loadTemplateInPainel('painel/all_posts', $dados);
 	}
 
 	public function menus() {

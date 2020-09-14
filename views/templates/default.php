@@ -5,7 +5,7 @@
 <head>
 	<meta accept-charset="iso-8859-1,utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php echo utf8_encode($this->config['site_title']); ?></title>
+	<title><?php echo $this->config['site_title']; ?></title>
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/default.css" />
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/default-mobi.css" />
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/icons_fonts/fonts.css" />

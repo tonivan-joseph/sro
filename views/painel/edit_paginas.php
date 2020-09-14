@@ -6,11 +6,11 @@
 	<div class="form-content">
 		<form class="item-form" accept-charset="iso-8859-1,utf-8" method="POST">
 			<label for="">Editar Titulo da Página:</label>
-			<input class="text" type="text" name="titulo" value="<?php echo utf8_encode($paginas['titulo']); ?>">
+			<input class="text" type="text" name="titulo" value="<?php echo $paginas['titulo']; ?>">
 			<label for="">Editar URL da Página:</label>
-			<input class="text" type="text" name="url" value="<?php echo utf8_encode($paginas['url']); ?>">
+			<input class="text" type="text" name="url" value="<?php echo $paginas['url']; ?>">
 			<label>Editar Corpo da Página:</label><br/>
-			<textarea class="texarea" name="corpo_pages" id="id_textarea"><?php echo utf8_encode($paginas['corpo_pages']); ?></textarea>
+			<textarea class="texarea" name="corpo" id="id_textarea"><?php echo $paginas['corpo']; ?></textarea>
 			<input class="btn-form" type="submit" name="enviar" value="Salvar" />
 		</form>
 	</div>

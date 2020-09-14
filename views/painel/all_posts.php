@@ -12,17 +12,17 @@
 			<th class="title-table">Data</th>
 		</tr>
 		
-		<?php foreach($edit as $ed): ?>
+		<?php foreach($all_posts as $ed): ?>
 		<tr>
 			<td>
-				<strong><a href="#"><?php echo utf8_encode($ed['titulo']); ?></a></strong>
+				<strong><a href="#"><?php echo $ed['titulo']; ?></a></strong>
 				<div class="row-actions">
 					<span class="edit"><a href="<?php echo BASE_URL; ?>painel/edit_paginas/<?php echo $ed['id']; ?>">Editar</a></span>
 					<span class="delete"><a href="<?php echo BASE_URL; ?>painel/del_paginas/<?php echo $ed['id']; ?>">Excluir</a></span>
 					<span class="views"><a href="<?php echo BASE.$ed['url']; ?>">Visualizar</a></span>
 				</div>
 			</td>
-			<td class="item-td"><?php echo utf8_encode($ed['autor']); ?></td>
+			<td class="item-td"><?php echo $ed['autor']; ?></td>
 			<td class="item-td"><?php echo $ed['data']; ?></td>
 		</tr>
 		<?php endforeach; ?>

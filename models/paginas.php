@@ -31,7 +31,7 @@ class Paginas extends model {
 	public function getPaginaById($id) {
 		$array  = array();
 
-		$sql = "SELECT titulo, url, corpo_pages FROM paginas WHERE id = '$id'";
+		$sql = "SELECT titulo, url, corpo FROM paginas WHERE id = '$id'";
 		$sql = $this->db->query($sql);
 
 		if($sql->rowCount() > 0){
@@ -47,13 +47,13 @@ class Paginas extends model {
 		$this->db->query("DELETE FROM paginas WHERE id = '$id'");
 	}
 
-	public function updatePages($id, $titulo, $url, $corpo_pages) {
+	public function updatePages($id, $titulo, $url, $corpo) {
 
-		$this->db->query("UPDATE paginas SET titulo = '$titulo', url = '$url', corpo_pages = '$corpo_pages' WHERE id = '$id'");
+		$this->db->query("UPDATE paginas SET titulo = '$titulo', url = '$url', corpo = '$corpo' WHERE id = '$id'");
 	}
 
-	public function insertPaginas($titulo, $url, $autor, $corpo_pages) {
-		$this->db->query("INSERT INTO paginas SET titulo = '$titulo', url ='$url', autor ='$autor', corpo_pages ='$corpo_pages'");
+	public function insertPaginas($titulo, $url, $autor, $corpo) {
+		$this->db->query("INSERT INTO paginas SET titulo = '$titulo', url ='$url', autor ='$autor', corpo ='$corpo'");
 	}
 
 	public function getTotalPaginas() {

@@ -44,8 +44,8 @@
 					<a href="<?php echo BASE_URL; ?>painel/edit"><span class="icon-price-tag icno-menu"></span><i class=" icon left fas fa-thumbtack"></i>Posts<i class=" icon rigth fas fa-angle-down"></i></a>
 
 					<ul class="menu_sub">
-						<li><a href="<?php echo BASE_URL; ?>painel/edit"><i class=" icon left fas fa-tags"></i>Todos os Posts</a></li>
-						<li><a href="<?php echo BASE_URL; ?>painel/add_paginas"><i class=" icon left fas fa-tag"></i>Novo Post</a></li>
+						<li><a href="<?php echo BASE_URL; ?>painel/all_posts"><i class=" icon left fas fa-tags"></i>Todos os Posts</a></li>
+						<li><a href="<?php echo BASE_URL; ?>painel/add_posts"><i class=" icon left fas fa-tag"></i>Novo Post</a></li>
 					</ul>
 					
 				</li>
