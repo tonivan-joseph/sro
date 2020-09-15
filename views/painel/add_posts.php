@@ -4,7 +4,7 @@
 	</header>
 	
 	<div class="form-content">
-		<form class="item-form" accept-charset="iso-8859-1,utf-8" method="POST">
+		<form class="item-form" method="POST">
 			<label for="">Titulo da Posts:</label>
 			<input class="text" type="text" name="titulo">
 

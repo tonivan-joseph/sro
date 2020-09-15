@@ -195,9 +195,10 @@ class painelController extends controller {
 		if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
 			$titulo = addslashes($_POST['titulo']);
 			$url = addslashes($_POST['url']);
+			$autor = addslashes($_POST['autor']);
 			$corpo = addslashes($_POST['corpo']);
 			
-			$p->updatePosts($id, $titulo, $url, $corpo);
+			$p->updatePosts($id, $titulo, $url, $autor, $corpo);
 			header("Location: ".BASE_URL."painel/Posts");
 			exit;
 		}
@@ -248,7 +249,7 @@ class painelController extends controller {
 			$corpo = addslashes($_POST['corpo']);
 			$p->insertPosts($titulo, $url, $autor, $corpo);
 
-			header("Location: ".BASE_URL."painel/all_posts");
+			header("Location: ".BASE_URL."painel/posts");
 			exit;
 		}
 

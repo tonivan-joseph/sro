@@ -4,10 +4,10 @@
 	</header>
 	
 	<div class="form-content">
-		<form class="item-form" accept-charset="iso-8859-1,utf-8" method="POST">
+		<form class="item-form" method="POST">
 			<label for="">Editar Titulo do Posts:</label>
 			<input class="text" type="text" name="titulo" value="<?php echo $posts['titulo']; ?>">
-			<label for="">Editar URL da Posts:</label>
+			<label for="">Editar URL do Posts:</label>
 			<input class="text" type="text" name="url" value="<?php echo $posts['url']; ?>">
 			<label>Editar Corpo da Posts:</label><br/>
 			<textarea class="texarea" name="corpo" id="id_textarea"><?php echo $posts['corpo']; ?></textarea>

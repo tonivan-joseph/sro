@@ -34,7 +34,7 @@ class Posts extends model {
 	public function getPostsById($id) {
 		$array  = array();
 
-		$sql = "SELECT titulo, url, corpo FROM posts WHERE id = '$id'";
+		$sql = "SELECT titulo, url, autor, corpo FROM posts WHERE id = '$id'";
 		$sql = $this->db->query($sql);
 
 		if($sql->rowCount() > 0){
@@ -52,7 +52,7 @@ class Posts extends model {
 
 	public function updatePosts($id, $titulo, $url, $autor, $corpo) {
 
-		$this->db->query("UPDATE posts SET titulo = '$titulo', url = '$url', corpo = '$corpo' WHERE id = '$id'");
+		$this->db->query("UPDATE posts SET titulo = '$titulo', url = '$url', autor = '$autor', corpo = '$corpo' WHERE id = '$id'");
 	}
 
 	public function insertPosts($titulo, $url, $autor, $corpo) {
