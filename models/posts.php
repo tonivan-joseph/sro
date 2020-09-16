@@ -62,7 +62,7 @@ class Posts extends model {
 	public function getTotalPosts() {
 		$sql = $this->db->query("SELECT COUNT(*) as c FROM posts");
 		$row = $sql->fetch();
-
+		
 		return $row['c'];
 	}
 }

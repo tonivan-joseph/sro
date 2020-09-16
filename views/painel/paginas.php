@@ -14,7 +14,7 @@
 		<?php foreach($paginas as $pagina): ?>
 		<tr>
 			<td class="td">
-				<strong><a href="#"><?php echo utf8_encode($pagina['titulo']); ?></a></strong>
+				<strong><a href="#"><?php echo $pagina['titulo']; ?></a></strong>
 				<div class="row-actions">
 					<span class="edit"><a href="<?php echo BASE_URL; ?>painel/edit_paginas/<?php echo $pagina['id']; ?>">Editar</a></span>
 					<span class="delete"><a href="<?php echo BASE_URL; ?>painel/del_paginas/<?php echo $pagina['id']; ?>">Excluir</a></span>

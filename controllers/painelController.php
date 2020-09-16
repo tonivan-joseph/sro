@@ -9,6 +9,7 @@ class painelController extends controller {
 		$u = new Usuarios();
 		$u->verificarLogin();
 		$p = new Paginas();
+		$ps = new Posts();
 
 		$dados = array();
 
@@ -17,6 +18,9 @@ class painelController extends controller {
 
 		$total_usuario = $u->getTotalUsuarios();
 		$dados['total_usuario'] = $total_usuario;
+
+		$total_posts = $ps->getTotalPosts();
+		$dados['total_posts'] = $total_posts;
 
 		$this->loadTemplateInPainel('painel/home', $dados);
 	}

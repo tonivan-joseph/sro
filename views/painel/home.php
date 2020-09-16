@@ -6,7 +6,7 @@
 		<div class="item-btn">
 			<div class="box_posts">
 				<h3>Ultimos Posts</h3>
-				<button class="btn_item">10 Artigos</button>
+				<button class="btn_item"><?php echo $total_posts." Artigos";?></button>
 			</div>
 			<div class="box_views">
 				<h3>Ultimos Views</h3>
