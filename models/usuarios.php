@@ -50,6 +50,24 @@ class Usuarios extends model {
 		}
 	}
 
+	public function getEdit_Users($nome, $email, $id) {
+
+		$this->db->query("UPDATE usuarios SET nome = '$nome', email = '$email' WHERE id = '$id'");
+	}
+
+	public function getEditUserById($id) {
+		$array = array();
+
+		$sql = "SELECT nome, email, senha FROM usuarios WHERE id ='$id'";
+		$sql = $this->db->query($sql);
+
+		if($sql->rowCount() > 0) {
+			$array = $sql->fetch();
+		}
+
+		return $array;
+	}
+
 	public function deletUsers($id) {
 
 		$this->db->query("DELETE FROM usuarios WHERE id = '$id'");

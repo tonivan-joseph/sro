@@ -294,6 +294,28 @@ class painelController extends controller {
 		$this->loadTemplateInPainel('painel/all_users', $dados);
 	}
 
+	public function edit_users($id) {
+		$u = new Usuarios();
+		$u->verificarLogin();
+
+		$dados = array();
+		//$us = new Usuarios();
+
+		if(isset($_POST['nome']) && !empty($_POST['nome'])){
+
+			$nome = addslashes($_POST['nome']);
+			$email = addslashes($_POST['email']);
+
+			$u->getEdit_Users($nome, $email, $id);
+			header("Location: ".BASE_URL."painel/all_users");
+			exit;
+		}
+
+		$dados['all_users'] = $u->getEditUserById($id);
+
+		$this->loadTemplateInPainel('painel/edit_users', $dados);
+	}
+
 	// funcção para excluir os usuários do sistema
 	public function del_users($id) {
 		$u = new Usuarios();
