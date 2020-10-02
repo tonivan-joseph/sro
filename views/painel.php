@@ -21,11 +21,6 @@
 			<div class="item-title">
 				<h1>Área Admistrativo</h1>
 			</div>
-				
-			<!-- <ul class="item_user">
-				<li>Olá, Usuário</li>
-				<img src="<?php //echo BASE_URL; ?>assets/images/Tony-autor.png" alt="Imagem_autor_Tony" />
-			</ul> -->
 		</header>
 		
 		<!-- Menu lateral do sistema -->
