@@ -8,7 +8,7 @@
 			<label for="">Nome do Menu:</label>
 			<input class="text" type="text" name="nome" value="<?php echo $menu['nome'] ?>"/>
 			<label for="">URL do Menu:</label>
-			<input class="text" type="text" name="url" value="<?php echo $menu['url'] ?>"></a>/>
+			<input class="text" type="text" name="url" value="<?php echo $menu['url'] ?>"/>
 			<label>Nome do Icons:</label><br/>
 			<input calss="text" type="text" name="icons" value="<?php echo $menu['icons'] ?>">
 			<input class="btn-form" type="submit" value="Salvar" />

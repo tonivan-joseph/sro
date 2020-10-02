@@ -305,8 +305,9 @@ class painelController extends controller {
 
 			$nome = addslashes($_POST['nome']);
 			$email = addslashes($_POST['email']);
+			$senha = md5(addslashes($_POST['senha']));
 
-			$u->getEdit_Users($nome, $email, $id);
+			$u->getEdit_Users($nome, $email,$senha, $id);
 			header("Location: ".BASE_URL."painel/all_users");
 			exit;
 		}

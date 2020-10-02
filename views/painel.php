@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 
 <html lang="pt-BR">
 <!-- Cabeçario do site -->
@@ -21,11 +21,11 @@
 			<div class="item-title">
 				<h1>Área Admistrativo</h1>
 			</div>
-
-			<ul class="item_user">
-				<li>Olá, Joseph</li>
-				<img src="<?php echo BASE_URL; ?>assets/images/Tony-autor.png" alt="Imagem_autor_Tony" />
-			</ul>
+				
+			<!-- <ul class="item_user">
+				<li>Olá, Usuário</li>
+				<img src="<?php //echo BASE_URL; ?>assets/images/Tony-autor.png" alt="Imagem_autor_Tony" />
+			</ul> -->
 		</header>
 		
 		<!-- Menu lateral do sistema -->
@@ -34,8 +34,9 @@
 				<a href="#" class="btn_menu_mobile"><i class=" icon fas fa-bars"></i></a>
 				<img src="<?php echo BASE_URL; ?>assets/images/logo-mobile.png" alt="logo-mobile">
 			</div>
-			<div class="item_logo">
-				<img src="<?php echo BASE_URL; ?>assets/images/logo-sro.png" alt="logo-mobile">
+			<div class="avatar">
+				<img src="<?php echo BASE_URL; ?>assets/images/Tony-autor.png" alt="Imagem_autor_Tony" />
+				<div class="name-user">Olá, Usuário</li>
 			</div>
 			<ul class="menu">
 				<li><a href="<?php echo BASE_URL; ?>painel"><span class="icon-home2 icno-menu"></span><i class=" icon left fas fa-home"></i>Inicio</a></li>
