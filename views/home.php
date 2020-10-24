@@ -61,12 +61,4 @@
 					</form>
 				</div>
 			</div>
-
-			<!-- <div class="depoimentos">
-				<?php //foreach($depoimentos as $depoitem): ?>
-					<strong><?php //echo utf8_encode($depoitem['name']); ?></strong>
-					<hr>
-					<p><?php //echo utf8_encode($depoitem['text']); ?></p>
-				<?php //endforeach ?>
-			</div> -->
 		</aside>

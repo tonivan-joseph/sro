@@ -26,7 +26,7 @@
 				<strong><a href="<?php echo BASE_URL.$menu['url']; ?>"><?php echo $menu['url']; ?></a></strong>
 			</td>
 			<td class="td">
-				<strong><i class="icon left fas <?php echo $menu['icons']; ?>"></i></strong>
+				<strong><i class=" icon left fas <?php echo $menu['icons'] ?>"></i></strong>
 			</td>
 		</tr>
 		

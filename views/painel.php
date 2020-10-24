@@ -27,7 +27,6 @@
 		<nav class="item nav">
 			<div class="item_logo-mobile">
 				<a href="#" class="btn_menu_mobile"><i class=" icon fas fa-bars"></i></a>
-				<img src="<?php echo BASE_URL; ?>assets/images/logo-mobile.png" alt="logo-mobile">
 			</div>
 			<div class="avatar">
 				<img src="<?php echo BASE_URL; ?>assets/images/Tony-autor.png" alt="Imagem_autor_Tony" />
