@@ -294,20 +294,19 @@ nav > div {
 .item-content {
     display: flex;
     flex-direction: column;
-    margin: 40px;
    min-height: 768px;
 }
 
-.item-content .item-header {
-    padding: 40px 10px;
-    background-color: #00BD9D;
-    border: 1px solid #CAC9CA;
+ .item-header {
+    padding: 20px 10px;
+    background-color: #3a464a;
+    border-left: 1px solid #CAC9CA;
 }
 
 .item-content .item-header h1 {
-    font-size: 2.5rem;
-    color: #191F24;
+    color: rgb(156, 172, 178);
     padding:7px 0 1px 0;
+    font-size: 1.2em;
 }
 
 .item-content .item-header h5 {
@@ -320,7 +319,7 @@ nav > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     /*background: #333;*/
-    margin:40px 0 20px 0;
+    margin:40px 10px;
     border: 1px solid #CAC9CA;
     padding: 10px;
     background: #fff;
@@ -385,10 +384,10 @@ nav > div {
 
 /*PAGINA TODOS OS POSTS*/
 table {
-    width: 100%;
+    max-width: 100%;
     border: 1px solid #dddddd;
     border-collapse: collapse;
-    margin-top: 40px; 
+    margin: 40px 10px; 
     background-color: #fff;
 }
 
@@ -475,7 +474,7 @@ tr >.tb-users:nth-child(3){width: 30%}
 .form-content {
     display: flex;
     flex-direction: column;
-    margin: 40px 0 20px 0;
+    margin: 40px 10px;
     max-width: 100%;
     height: auto;
     border: 1px solid #CAC9CA;

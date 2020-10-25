@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bem Vindo(a) ao Painel Adminstrativo</title>
+	<title>Painel Adminstrativo</title>
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/painel.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
@@ -16,12 +16,6 @@
 <body>
 	<div class="top_align_header"></div>
 	<main class="main-template ">
-		<!--cabeçalho do sistema -->
-		<header class="item-header header">
-			<div class="item-title">
-				<h1>Área Admistrativo</h1>
-			</div>
-		</header>
 		
 		<!-- Menu lateral do sistema -->
 		<nav class="item nav">

@@ -13,6 +13,9 @@
 		</tr>
 		
 		<?php foreach($posts as $ed): ?>
+		<?php $data = $ed['data'];
+			  $data_fomat = date('d/m/Y H:i:s', strtotime($data));
+		 ?>
 		<tr>
 			<td>
 				<strong><a href="#"><?php echo $ed['titulo']; ?></a></strong>
@@ -23,7 +26,7 @@
 				</div>
 			</td>
 			<td class="item-td"><?php echo $ed['autor']; ?></td>
-			<td class="item-td"><?php echo $ed['data']; ?></td>
+			<td class="item-td"><?php echo $data_fomat; ?></td>
 		</tr>
 		<?php endforeach; ?>
 		

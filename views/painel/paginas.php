@@ -12,6 +12,9 @@
 			<th class="title-table">Data</th>
 		</tr>
 		<?php foreach($paginas as $pagina): ?>
+		<?php $data = $pagina['data'];
+			  $data_fomat = date('d/m/Y H:i:s', strtotime($data));
+		 ?>
 		<tr>
 			<td class="td">
 				<strong><a href="#"><?php echo $pagina['titulo']; ?></a></strong>
@@ -22,10 +25,10 @@
 				</div>
 			</td>
 			<td class="td">
-				<strong><a href="#"><?php echo $pagina['autor']; ?></a></strong>
+				<strong><?php echo $pagina['autor']; ?></strong>
 			</td>
 			<td class="td">
-				<strong><a href="#"><?php echo $pagina['data']; ?></a></strong>
+				<strong><?php echo $data_fomat; ?></strong>
 			</td>
 		</tr>
 		<?php endforeach; ?>

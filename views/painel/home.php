@@ -1,6 +1,5 @@
 	<header class="item-header">
-		<h1>Bem Vindo(a) ao SRO</h1>
-		<h5>Painel Administrativo totalmente Dinâmico!</h5>
+		<h1>Home</h1>
 	</header>
 	<section class="item-graph">
 		<div class="item-btn">
@@ -13,7 +12,7 @@
 				<button class="btn_item">253 Visítas</button>
 			</div>
 		</div>
-		<divi class="item-lists">
+		<div class="item-lists">
 			<ul class="">
 				<li class="item-cls"><i class="fas fa-users"></i><?php echo $total_usuario; ?> - Usuários</li>
 				<li class="item-cls"><i class="fas fa-pager"></i> <?php echo $total_paginas; ?> - Páginas</li>
